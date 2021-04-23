@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calcular Hipotenusa</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function val(){
+                let cateto1 = document.getElementById("ca1").value;
+                let cateto2 = document.getElementById("ca2").value;
+                
+                if(cateto1.length===0||cateto2.length===0){
+                    window.alert("SE OMITIO UNO DE LOS CATETOS");
+                    return false;
+                }else if(isNaN(cateto1)||isNaN(cateto2)){
+                    window.alert("UNO DE LOS VALORES INGRESADOS NO ES UN NUMERO");
+                    return false;
+                }      
+            }
+        </script>
+        
+    </head>
+    <body>
+        <h1>Ingrese Los Catetos</h1>
+        <form action="hipotenusa" method="get">
+            <p>Cateto opuesto</p>
+            <p><input id="ca1" type="text" name="cateto1"></p>
+            <p>Cateto adyacente</p>
+            <p><input id="ca2" type="text" name="cateto2"></p>
+            <p><input type="submit" name="potenciar" value="Calcular" onclick="return val()" ></p>
+        </form>
+    </body>
+</html>
